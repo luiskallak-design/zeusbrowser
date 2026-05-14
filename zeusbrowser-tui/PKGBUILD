@@ -1,34 +1,41 @@
-# Maintainer: Harpia <seu-email@dominio.com>
-pkgname=zeusbrowser
-pkgver=1.0.0
-pkgrel=1
-pkgdesc="O Radar do Olimpo - Navegador TUI de arquivos assíncrono com player integrado"
-arch=('x86_64' 'aarch64')
-# Substitua com a URL real do seu repositório quando criar o projeto no GitHub
-url="https://github.com" 
-license=('GPL3')
+# ⌬ [ZEUS-BROWSER] - NÚCLEO DE NAVEGAÇÃO DO ECOSSISTEMA ARCHIA
+# Maintainer: luiskallak-design <luiskallak@gmail.com>
 
-# Dependências oficiais encontradas nos repositórios padrão do Arch (Sem AUR)
-depends=('ncurses' 'sdl2' 'sdl2_mixer' 'feh' 'nano' 'kitty')
-makedepends=('gcc' 'make' 'git')
+pkgname=zeusbrowser-git
+pkgver=1.0
+pkgrel=1
+pkgdesc="Navegador cyberpunk tático com integração feh e suporte a áudio digital"
+arch=('x86_64')
+url="https://github.com/luiskallak-design/zeusbrowser"
+license=('MIT')
+
+# Arsenal de Dependências
+depends=('ncurses' 'feh' 'alsa-utils')
+makedepends=('git' 'gcc' 'make')
 provides=('zeusbrowser')
 conflicts=('zeusbrowser')
 
-# O pacman vai clonar a branch master do seu GitHub automaticamente
 source=("git+${url}.git")
 sha256sums=('SKIP')
 
 build() {
-  # Entra na pasta do código clonado pelo Git
-  cd "${srcdir}/${pkgname}"
+  # Entra na pasta do clone e depois na subpasta onde o Makefile reside
+  cd "$srcdir/zeusbrowser/zeusbrowser-tui"
   
-  # Executa o Makefile azul/divino que estruturamos
+  echo -e "\033[0;36m⌬ INICIANDO FORJA DO OBSERVADOR DO OLIMPO...\033[0m"
   make
 }
 
 package() {
-  cd "${srcdir}/${pkgname}"
+  # Entra na subpasta para coletar o binário e assets gerados
+  cd "$srcdir/zeusbrowser/zeusbrowser-tui"
   
-  # Instala o executável final no diretório correto do sistema empacotado
-  install -Dm755 bin/zeusbrowser "${pkgdir}/usr/bin/zeusbrowser"
+  echo -e "\033[0;32m⌬ DISTRIBUINDO ASSETS E BINÁRIO NO SISTEMA...\033[0m"
+  
+  # Instalação do Binário Principal do Zeus
+  install -Dm755 bin/zeusbrowser "$pkgdir/usr/bin/zeusbrowser"
+  
+  # Instalação dos Assets Visuais (Temas de Cores)
+  mkdir -p "$pkgdir/usr/share/zeusbrowser/assets"
+  cp -r assets/* "$pkgdir/usr/share/zeusbrowser/assets/"
 }
