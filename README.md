@@ -1,11 +1,4 @@
 # ⌬ ZEUS-BROWSER // O Observador do Olimpo
-
-# ⌬ ZEUS-BROWSER // O Observador do Olimpo
-
-![Ecossistema-Archon](https://shields.io)
-![Tema-Mitologia](https://shields.io)
-![Status](https://shields.io)
-
 <p align="center">
   <img src="zeusbrowser-tui/assets/zeusbrowser.png" alt="Zeus Browser Terminal Interface" width="100%">
 </p>
