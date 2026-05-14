@@ -69,7 +69,6 @@ A interface responde instantaneamente aos seguintes gatilhos operacionais mapead
 | <kbd>Q</kbd> | `EXIT` | Aborta o processo imediatamente, limpando a memória |
 
 ---
-
 ## 📂 Organização da Matéria-Prima
 
 ```text
@@ -84,6 +83,11 @@ zeusbrowser/
 ```
 
 ---
+
+<p align="center">
+  <img src="zeusbrowser-tui/assets/zeusnano.png" width="30%" alt="Zeus Nano Shield" />
+</p>
+
 <p align="center">
   <img src="https://shields.io" />
 </p>
