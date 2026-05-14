@@ -1,8 +1,15 @@
 # ⌬ ZEUS-BROWSER // O Observador do Olimpo
 
-[![Ecossistema-Archon](https://shields.io)](https://github.com)
-[![Mitologia-Grega](https://shields.io)](https://github.com)
-[![Status-Operacional](https://shields.io)](#)
+![Ecossistema-Archon](https://shields.io)
+![Tema-Mitologia](https://shields.io)
+![Status](https://shields.io)
+
+<p align="center">
+  <img src="zeusbrowser-tui/assets/zeusbrowser.png" alt="Zeus Browser Terminal Interface" width="100%">
+</p>
+
+> Navegador tático do ecossistema mitológico Archon. Desenvolvido para alto desempenho com integração nativa ao visualizador feh e suporte a áudio digital. Comande a web e monitore os dados da rede diretamente do topo do Olimpo.
+
 
 > Navegador tático do ecossistema mitológico Archon. Desenvolvido para alto desempenho com integração nativa ao visualizador feh e suporte a áudio digital. Comande a web e monitore os dados da rede diretamente do topo do Olimpo.
 
