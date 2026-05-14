@@ -1,0 +1,34 @@
+# Maintainer: Harpia <seu-email@dominio.com>
+pkgname=zeusbrowser
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="O Radar do Olimpo - Navegador TUI de arquivos assíncrono com player integrado"
+arch=('x86_64' 'aarch64')
+# Substitua com a URL real do seu repositório quando criar o projeto no GitHub
+url="https://github.com" 
+license=('GPL3')
+
+# Dependências oficiais encontradas nos repositórios padrão do Arch (Sem AUR)
+depends=('ncurses' 'sdl2' 'sdl2_mixer' 'feh' 'nano' 'kitty')
+makedepends=('gcc' 'make' 'git')
+provides=('zeusbrowser')
+conflicts=('zeusbrowser')
+
+# O pacman vai clonar a branch master do seu GitHub automaticamente
+source=("git+${url}.git")
+sha256sums=('SKIP')
+
+build() {
+  # Entra na pasta do código clonado pelo Git
+  cd "${srcdir}/${pkgname}"
+  
+  # Executa o Makefile azul/divino que estruturamos
+  make
+}
+
+package() {
+  cd "${srcdir}/${pkgname}"
+  
+  # Instala o executável final no diretório correto do sistema empacotado
+  install -Dm755 bin/zeusbrowser "${pkgdir}/usr/bin/zeusbrowser"
+}
