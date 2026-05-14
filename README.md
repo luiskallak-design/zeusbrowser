@@ -88,6 +88,3 @@ zeusbrowser/
   <img src="zeusbrowser-tui/assets/zeusnano.png" width="30%" alt="Zeus Nano Shield" />
 </p>
 
-<p align="center">
-  <img src="https://shields.io" />
-</p>
