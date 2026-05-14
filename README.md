@@ -85,6 +85,6 @@ zeusbrowser/
 ---
 
 <p align="center">
-  <img src="zeusbrowser-tui/assets/zeusnano.png" width="30%" alt="Zeus Nano Shield" />
+  <img src="zeusbrowser-tui/assets/zeusplayer.png" width="30%" alt="Zeus Nano Shield" />
 </p>
 
