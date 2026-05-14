@@ -58,15 +58,19 @@ makepkg -si
 
 ## 🎹 Matriz de Comandos (Keybindings)
 
-A interface responde instantaneamente aos seguintes gatilhos operacionais mapeados no terminal:
+A interface responde instantaneamente aos seguintes gatilhos operacionais mapeados na barra de status:
 
 
-| Atalho | Ação Executada | Função no Olimpo |
+| Atalho | Comando / Motor | Função no Olimpo |
 | :--- | :--- | :--- |
 | <kbd>F1</kbd> | `HOME` | Retorna o foco para a matriz central do sistema |
-| <kbd>F2</kbd> | `TOGGLE IMAGE` | Dispara o dump e renderização gráfica via `feh` |
-| <kbd>F5</kbd> | `CHANGE THEME` | Alterna instantaneamente a paleta de cores (Visual/Cyber) |
+| <kbd>F2</kbd> | `GGLE` (Google) | Dispara busca rápida no motor Google |
+| <kbd>F3</kbd> | `DUCK` (DuckDuckGo) | Consulta tática focada em privacidade via DuckDuckGo |
+| <kbd>F4</kbd> | `YTUB` (YouTube) | Invoca a busca de streams de vídeo/áudio no YouTube |
+| <kbd>F5</kbd> | `THEME` | Alterna instantaneamente a paleta de cores (Matrizes) |
+| <kbd>ENTER</kbd> | `INVOKE` | Executa e renderiza a URL ou termo selecionado |
 | <kbd>Q</kbd> | `EXIT` | Aborta o processo imediatamente, limpando a memória |
+
 
 ---
 ## 📂 Organização da Matéria-Prima
