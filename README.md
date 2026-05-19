@@ -24,10 +24,6 @@
 
 ---
 
-## ⚔️ O Arsenal Tecnológico
-
-O **ZEUS-BROWSER** rejeita o inchaço dos navegadores comerciais modernos. Ele opera como uma sentinela ultraleve na sua interface de terminal, integrando manipulação gráfica externa e fluxo de som digital de forma cirúrgica.
-
 *   👁️ **Visão de Águia (Engine Feh):** Delegamento instantâneo de renderização visual para o visualizador de imagens `feh`.
 *   🔊 **Frequência Divina:** Camada integrada de áudio via drivers ALSA para manipulação de streams digitais.
 *   ⚡ **Performance Militar:** Construído puramente em C com suporte completo a Unicode para exibição de glifos e ícones complexos.
