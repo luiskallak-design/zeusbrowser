@@ -14,10 +14,21 @@
 </p>
 
 ---
-
 ## ⚔️ O Arsenal Tecnológico
 
-> Navegador tático do ecossistema mitológico Archon. Desenvolvido para alto desempenho com integração nativa ao visualizador feh e suporte a áudio digital. Comande a web e monitore os dados da rede diretamente do topo do Olimpo.
+> O **ZeusBrowser TUI** é a central de comando web definitiva do ecossistema Archon. Forjado puramente em **Linguagem C** para terminais de alta performance, ele traz integração nativa ao visualizador `feh` e processamento otimizado de áudio digital. Governe a web e monitore os fluxos de dados diretamente do topo do Olimpo.
+
+### 🛠️ Arquitetura e Dependências
+
+O projeto utiliza a biblioteca `ncurses` para renderização gráfica no terminal e ferramentas nativas para manipulação de mídia e texto.
+
+* **Linguagem:** C (GCC / Make)
+* **Interface:** `ncurses`
+* **Editor Integrado:** `nano`
+* **Gráficos:** `feh`
+* **Áudio:** `alsa-utils`
+
+
 
 
 ---
