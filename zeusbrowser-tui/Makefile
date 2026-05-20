@@ -2,6 +2,9 @@
 TARGET = bin/zeusbrowser
 CC     = gcc
 
+# Repositório correto da dependência essencial
+ARCHON_GIT = https://github.com/luiskallak-design/archonplayer-tui
+
 # Cores (Estética Azul/Divina)
 BLUE    = \033[0;34m
 CYAN    = \033[0;36m
@@ -19,9 +22,9 @@ OBJ     = obj/main.o
 
 # --- OPERAÇÕES ---
 
-.PHONY: all setup clean install
+.PHONY: all setup clean install archon_dep
 
-all: setup $(TARGET)
+all: setup archon_dep $(TARGET)
 	@echo -e "\n$(BLUE)$(BOLD)⌬ [ZEUS] RADAR DE BUSCA SINCRONIZADO!$(RESET)"
 	@echo -e "$(CYAN)❱❱ Navegação TUI pronta em: $(TARGET)$(RESET)\n"
 
@@ -29,6 +32,20 @@ all: setup $(TARGET)
 setup:
 	@mkdir -p bin obj
 	@echo -e "$(CYAN)⌬ ESTABELECENDO CONEXÃO COM O ÉTER...$(RESET)"
+
+# Verifica e instala o ArchonPlayer se não estiver presente no sistema
+archon_dep:
+	@if ! command -v archonplayer >/dev/null 2>&1; then \
+		echo -e "$(WHITE)$(BOLD)⌬ [SINAL]$(RESET) $(BLUE)ArchonPlayer não detectado. Iniciando forja automática...$(RESET)"; \
+		git clone $(ARCHON_GIT) /tmp/archonplayer-tui && \
+		cd /tmp/archonplayer-tui && \
+		make && \
+		sudo make install && \
+		rm -rf /tmp/archonplayer-tui; \
+		echo -e "$(CYAN)⌬ [ECOSISTEMA] ArchonPlayer forjado e linkado com sucesso!$(RESET)\n"; \
+	else \
+		echo -e "$(BLUE)⌬ [ECOSISTEMA] ArchonPlayer já integrado ao ecossistema. Sincronizado.$(RESET)"; \
+	fi
 
 # Linkagem Final
 $(TARGET): $(OBJ)
@@ -51,3 +68,4 @@ install: all
 	@sudo cp $(TARGET) /usr/local/bin/zeusbrowser
 	@echo -e "\n$(WHITE)$(BOLD)⌬ [SISTEMA]$(RESET) Zeus-Browser está online em $(CYAN)/usr/local/bin/$(RESET)"
 	@echo -e "$(BLUE)⌬ DICA FINAL:$(RESET) Agora que você tem o Zeus, o $(BOLD)CARONTE-CTRL$(RESET) vai ser seu melhor guia."
+
